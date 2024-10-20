@@ -1,0 +1,31 @@
+actor calculator {
+var hucre: Int = 0;
+
+public func summation(s:Int) : async Int {
+  hucre += s;
+  return hucre;
+};
+
+public func extraction(s: Int) : async Int {
+  hucre -= s;
+  return hucre;
+};
+
+public func multiplication(s: Int) : async Int {
+  hucre *= s;
+  return hucre;
+};
+
+public func division(s: Int) : async ?Int {
+  if (s == 0){
+    return null;
+  } else {
+  hucre /= s;
+  return ?hucre;
+  };
+};
+  
+public func clean() : async (){
+  hucre := 0;
+  }; 
+};
